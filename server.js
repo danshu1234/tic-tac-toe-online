@@ -11,14 +11,14 @@ const server = createServer(app);
 app.use(express.json())
 
 app.use(cors({
-origin: 'http://localhost:3000'
+origin: 'http://localhost:3001'
 }));
 
-mongoose.connect('mongodb+srv://danshu:TxqI0uFGnawY4OZB@sockets-id.mpgik.mongodb.net/?retryWrites=true&w=majority&appName=Sockets-id/blog')
+mongoose.connect('mongodb+srv://me:XETMmP0DRPSeUjym@cluster0.ib0vw.mongodb.net/')
 
 const io = new Server(server, {
     cors: {
-      origin: "http://localhost:3000", 
+      origin: "http://localhost:3001", 
       methods: ["GET", "POST"],
     },
 });
